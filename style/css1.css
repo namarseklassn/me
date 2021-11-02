@@ -42,11 +42,73 @@
         .product-card_inf_title{
             display: flex;
             justify-content: space-between;
+            font-size: 24px;
+            width: 700px;
+            color: #000;
+            font-weight: bold;
         }
         .product-card{
             display: flex;
-            width: 800px;
+            width: 1000px;
+            margin-top: 20px;
         }
         .product-card_inf{
-            width: 100%;
+            margin-left: 5%;
+            display: flex;
+            flex-direction: column;
+        }
+        .product-card_img{
+            width: 150px;
+            min-width: 150px;
+            height: 150px;
+            display: flex;
+            align-items:center;
+            border: 1px solid #000;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+        .product-card_img img{
+            max-width: 100%;
+            max-height: 100%;
+
+        }
+        .product-card_inf_btn{
+            margin-top: auto;
+            display: flex;
+            justify-content: end;
+            font-size: 22px;
+        }
+        .product-card_inf_btn a{
+            display: block;
+            padding: 7px 14px;
+            border: 4px solid rgb(123, 101, 12);
+            background: burlywood;
+            text-decoration: none;
+            color: green;
+            border-radius: 25px;
+
+        }
+        .product-card_inf_btn a:hover{
+            background: blueviolet;
+            color: black;
+            transition: all 2s;
+        }
+        .product-card_inf_inf{
+            color: gray;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .container{
+            width: 1000px;
+            margin: 0px auto;
+        }
+        body{
+            font-family: 'Ceviche One', cursive;
+            background:rgb(174, 113, 113) ;
+        }
+        .catalog{
+            background:#fff;
+            padding: 20px;
+            box-sizing: border-box;
+            box-shadow: 10px 0px 20px black;
         }
