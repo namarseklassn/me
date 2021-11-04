@@ -89,7 +89,7 @@
 
         }
         .product-card_inf_btn a:hover{
-            background: blueviolet;
+            background: rgb(111, 97, 240);
             color: black;
             transition: all 2s;
         }
@@ -104,11 +104,11 @@
         }
         body{
             font-family: 'Ceviche One', cursive;
-            background:rgb(174, 113, 113) ;
+            background:rgb(102, 158, 184);
         }
         .catalog{
             background:#fff;
             padding: 20px;
             box-sizing: border-box;
-            box-shadow: 10px 0px 20px black;
+            box-shadow: 10px 5px 20px black;
         }
