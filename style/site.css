@@ -88,10 +88,15 @@ object-fit: cover;
     font-size: 10px;
     line-height: 12px;
     color: #ffffff;
+    margin-bottom: 20px;
+    
 }
 .middle-line{
     height: 1px;
     min-width: 30px;
     background: #e5e5e5;
     margin: 9px 11px;
+}
+.text-flex{
+    display: flex;
 }
