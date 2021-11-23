@@ -1,0 +1,17 @@
+@media screen and (max-width:1300px) {
+    .container{
+        width: 97%;
+    }
+}
+@media screen and (max-width:730px) {
+    .header-flex-2{
+        display: none;
+    }
+}
+@media screen and (max-width:600px) {
+    .banner-info, .big-post{
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
