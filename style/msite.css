@@ -2,6 +2,12 @@
     .container{
         width: 97%;
     }
+    .topic{
+        width: 32%;
+    }
+    .topic-list{
+        justify-content: space-between;
+    }
 }
 @media screen and (max-width:730px) {
     .header-flex-2{
@@ -13,5 +19,61 @@
         width: 90%;
         left: 50%;
         transform: translateX(-50%);
+    }
+    .banner-info{
+        text-align: center;
+    }
+    .text-flex{
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+@media screen and (max-width:1030px){
+    .topic{
+        width: 48%;
+    }
+    .post-list{
+        overflow-x: auto;
+    
+    }
+    .post{
+        min-width: 420px;
+
+    }
+}
+@media screen and (max-width:515px){
+    .topic{
+        width: 100%;
+    }
+    .filter-list{
+        display: none;
+    }
+    .mobile-filter{
+        display: block;
+        margin: 15px 0px;
+    }
+    .mobile-filter p{
+        font-size: 18px;
+        line-height: 25px;
+        color: black;
+    }
+    .mobile-filter select {
+        width: 100%;
+        border: none;
+        color: black;
+        padding: 5px 7px;
+        border-radius: 5px;
+        margin-top: 5px;
+    }
+    .big-post-text{
+        width: auto;
+    }
+    .footer-container{
+        flex-wrap: wrap;
+        gap: 30px 0px;
+    }
+    .footer-container div:nth-child(1){/*выбирает нужный див в контейнере*/
+        order: 4;/*перенос выбранного элемента на указанное место*/
     }
 }
