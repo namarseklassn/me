@@ -52,7 +52,6 @@ body{
 h2{
     text-align:center ;
     color: rgb(235, 196, 138);
-    
 }
 .input-container label{
     position: absolute;
@@ -77,7 +76,7 @@ h2{
     appearance: none;
     -webkit-appearance: none;
 }
-.checkbox-container label{
+/*.checkbox-container label{
     position: relative;
     padding-left: 30px;
     font-style: 18px;
@@ -104,10 +103,103 @@ h2{
     top: 1px;
     background: aqua;
     z-index: 2;
-    opacity: 0;/*задает видимость элемента*/
+    opacity: 0;/*задает видимость элемента
     transition:  all 0.3s;
-}
+}*/
 .checkbox-container input[type="checkbox"]:checked + label::before{
     opacity: 1;
     transition: all 0.3s;
+}
+.checkbox-container label{
+    padding-left: 45px;
+}
+.checkbox-container label::after{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: block;
+    width: 40px;
+    height: 20px;
+    border: 1px solid orange;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+.checkbox-container{
+    position: relative;
+    margin-top: 10px;
+}
+.checkbox-container label::before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: chocolate;
+    border-radius: 50%;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+}
+.checkbox-container input:checked + label::before{
+    left: 20px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    transition: all .3s;
+}
+.checkbox-container input:checked + label::after{
+    transition: all .3s;
+    background: orange;
+}
+.radio-list{
+    margin-top: 15px;
+    display: flex;
+}
+.radio-container{
+    margin-right: 20px;
+}
+.radio-container input[type="radio"]{
+    appearance: none;
+    -webkit-appearance: none;
+}
+label{
+    cursor: pointer;
+}
+.radio-container input:checked + label.telegram svg path{
+    fill: rgb(26, 11, 160);
+}
+.radio-container input:checked + label.viber svg path{
+    fill: rgb(17, 167, 72);
+}
+.radio-container input:checked + label.instagram svg path{
+    fill: rgb(189, 47, 172);
+}
+.radio-container label:hover svg path{
+    fill: brown;
+}
+.checkbox-subContainer textarea{
+     resize: none;
+     border: 1px solid orange;
+     border-radius: 5px;
+     width: 100%;
+     height: 100%;
+     padding: 5px;
+     box-sizing: border-box;
+     font-size: 18px;
+     line-height: 22px;
+     cursor: default;
+}
+.checkbox-container textarea:focus{
+    color: orange;
+}
+.checkbox-subContainer{
+    margin-top: 10px;
+    opacity: 0;
+    height: 0px;
+    transition: all .3s;
+}
+#checkbox_5:checked ~ .checkbox-subContainer{
+    opacity: 1;
+    height: 120px;
+    transition: all .3s;
 }
