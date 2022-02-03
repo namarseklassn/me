@@ -34,6 +34,7 @@
 // Pokupatel.delete2()
 
 
+
 function Fish(name, color, predator, size,speed) {
     this.name = name;
     this.color = color;
@@ -67,19 +68,19 @@ const f4 = new Fish ('kasatka', 'grey', 'yes', 115, 9);
 const f5 = new Fish ('malek', 'red', 'yes', 169, 22);
 const allFish = [f1,f2,f3,f4,f5];
 const f6 = new Fish ('kit', 'purple', 'no', 300, 12);
-let a =  prompt('name');
-let e = allFish.forEach((f) => {
-    if (a === f) {
-        console.log('you kill ' + a);
-    } else {console.log(('you safe live ' + a));
-}
-})
+const aquarium = [];
+aquarium.add 
 
-console.log(e);
-aquarium.add(f6) //добавл рыбу
+
+ 
+// let a =  prompt('name');
+// let e = this.name.forEach((f) => {
+//     if (a === f) {
+//         console.log('you kill ' + a);
+//     } else {console.log(('you safe live ' + a));
+// }
+// })
+
+// console.log(e);
+// aquarium.add(f6) //добавл рыбу
 aquarium.show(); //вывел рыб
-
-
-
-
-
