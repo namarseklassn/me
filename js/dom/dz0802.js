@@ -22,14 +22,13 @@
 //                 index: user.address.zipcode,
 //                 number: user.address.suite,
 //             },
-            
 //                 }
 //     })
 //     .map(user=>{
 //         const pos = user.name.indexOf(' ');
 //         user.name = user.name.slice(pos+1);
 //         return user
-//     })
+//     });
     
 // const q = object.map(address=> {address.sute 
 //     const posN = address.suite.indexOf(' ');
@@ -42,9 +41,11 @@
 //     //     }
 //     //     return sum
 //     //     })
-    
-  
-    
+// object.forEach((e,i) => {
+// let code = e.address.zipcode.replaceAll('-','');
+// code = math.ceil(Number.parseInt(code)/2);
+// user.address    
+// });
 // // console.log (sortByName)
 // // console.log(sum);
 // console.log(a);
@@ -64,12 +65,16 @@ request.onload = function() {
     const object = JSON.parse(result);
     const a = object.map( posts => {
         return {
-           title: posts.title.slice(0, 24),
-           body: posts.body.map(a=>a[0]
-            .toUpperCase() + a.slice(1)
-            .toLowerCae())
-            .sort(),
             userId:posts.userId,
+           title: posts.title.slice(0, 24),
+            body: posts.body.split(' ')
+            .map(a=>a[0]
+            .toUpperCase() + a.slice(1)
+            .join(' ')
+            .split('\n')
+            .toUpperCase() + a.slice(1)
+            .join(' '),
+            
         }
     })
     delete posts.userId
