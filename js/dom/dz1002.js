@@ -18,21 +18,24 @@ xhr.onload = function() {
                 return 0
             }
     });
-    object.images.forEach(image=>{
-        image.images = object.images.filter(w=>{
-            if (w.width > '800px') 
-            if (w.height > '800px');
-        })
-    });
+    
+    // object.images.forEach(image=>{
+    //     image.images = object.images.filter(w=>{
+    //         if (w.width > '800px') 
+    //         if (w.height > '800px');
+    //     })
+    // });
     object.albums.forEach(userId=>{
         userId.users = object.users.filter(id =>
             id.id === userId.authorId )
     });
-    object.albums.forEach(imgId=>{
-        imgId.images = object.images.filter(img =>
-            img.imageId === imgId.images)
+    object.albums.forEach(album=>{
+        album.images = album.images.map(imgId=> object.images.find(img=>
+            img.imageId === imgId))
     })
-
+    const bigImg = object.images.filter(img =>Number.parseInt(img.width)>800 && Number.parseInt(img.height))
+    console.log(bigImg)
+    object.alboms = object.alboms.filter(albom => albom.images.length >=5)
     // console.log(a)
     console.log(object);
 };
