@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        body{
+            background-color: grey;
+        }
+        div{
+            margin: 100px;
+            padding: 100px;
+            border: 1px black solid;
+        }
+    </style> -->
+</head>
+<body>
+    <div>
+        <div>
+            <div></div>
+            <div id="target">
+                <div></div>
+                <div></div>
+            </div>
+            <div></div>
+        </div>
+    </div>
+    <div class="target">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3
+                <ul>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                </ul>
+            </li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+    <!-- <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul> -->
+    <script>
+        // const li = document.body.querySelectorAll('.target>ul>li>ul>li:nth-child(2n)')
+        // li.forEach(li=>li.style.color ='red')
+        // const li1 = document.body.querySelectorAll('.target>ul>li:nth-child(1)')
+        // li1.forEach(li=>li.style.fontSize = '10px')
+        // const li2 = document.body.querySelectorAll('.target>ul>li:nth-child(2)')
+        // li2.forEach(li=>li.style.fontSize = '20px')
+        // const li3 = document.body.querySelectorAll('.target>ul>li:nth-child(3)')
+        // li3.forEach(li=>li.style.fontSize = '30px')
+        // const li4 = document.body.querySelectorAll('.target>ul>li:nth-child(4)')
+        // li4.forEach(li=>li.style.fontSize = '40px')
+        // const li5 = document.body.querySelectorAll('.target>ul>li:nth-child(5)')
+        // li5.forEach(li=>li.style.fontSize = '50px')
+        const li = document.body.querySelectorAll('li');
+        size =10;
+        li.forEach(li=>{
+            li.style.fontSize = size +'px';
+            size +=10;
+        })
+
+
+
+        // const lis = Array.from(document.body.querySelectorAll('li'));
+        // lis.forEach(li => {
+        //     let n = li.textContent;
+        //     if(Number.parseInt(n)%2==0){
+        //         li.style.backgroundColor = 'red'
+        //     }
+        // }); 
+        // lis.forEach(la =>{
+        //     let q =la.textContent;
+        //     if(Number,parseInt(q)%2!==0){
+        //         delete q
+        //     }
+        // })
+        // const parent = document.querySelector('#target')
+        // parent.parentElement.style.backgroundColor = 'green'
+        // parent.style.backgroundColor ='red'
+        // parent.firstElementChild.style.backgroundColor = 'black'
+        // parent.lastElementChild.style.backgroundColor = 'yellow'
+        // parent.nextElementSibling.style.backgroundColor = 'blue'
+        // parent.previousElementSibling.style.backgroundColor = 'purple'
+        // parent.parentElement.parentElement.style.backgroundColor = 'pink'
+    </script>
+</body>
+</html>
