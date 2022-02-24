@@ -31,18 +31,10 @@
     p.forEach(p=>p.style.textDecoration='UnderLine')
     let q = document.body.querySelectorAll('.big')
     q.forEach(q=>q.style.textDecoration='UnderLine')
-    let del = document.body.querySelector('p')
+    let del = document.body.querySelectorAll('p')
     del.forEach(d => {
-        let delQ =d.textContent;
-        if(delQ == 'text3'){
-            delete delQ
-        }
-    })
-    del.classList.remove(' ')
-    let li = document.body.querySelectorAll('li')
-    li.classList.add('item')
-    let pi = document.body.querySelectorAll('li')
-    li.classList.add('item')
+        d.className = ''
+        })
     </script>
 </body>
 </html>
