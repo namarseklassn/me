@@ -35,8 +35,12 @@
     <div></div>
 </div>
 <script>
-    let netDoch = document.querySelector('div')
-    netDoch.firstElementChild.style.backgroundColor = 'green'
+    let div = document.querySelector('div')
+    div.forEach(e => {
+        if(div.children.length ===0){
+            div.style.backgroundColor = 'blue'
+        }
+    });
 </script>
 </body>
 </html>
