@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        li{
+            list-style: square;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <p>text1</p>
+        </li>
+        <li>
+            <p class="small">text2</p>
+        </li>
+        <li>
+            <p>text3</p>
+        </li>
+        <li>
+            <p class="big">text4</p>
+        </li>
+        <li>
+            <p>text5</p>
+        </li>
+    </ul>
+    <script>
+        let p = document.body.querySelectorAll('.small')
+    p.forEach(p=>p.style.textDecoration='UnderLine')
+    let q = document.body.querySelectorAll('.big')
+    q.forEach(q=>q.style.textDecoration='UnderLine')
+    let del = document.body.querySelector('p')
+    del.forEach(d => {
+        let delQ =d.textContent;
+        if(delQ == 'text3'){
+            delete delQ
+        }
+    })
+    del.classList.remove(' ')
+    let li = document.body.querySelectorAll('li')
+    li.classList.add('item')
+    let pi = document.body.querySelectorAll('li')
+    li.classList.add('item')
+    </script>
+</body>
+</html>
