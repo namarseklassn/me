@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+     <title>Document</title>
+</head>
+<body>
+<!-- <header>
+    <nav>
+        <ul class="head-menu">
+            <li>page1</li>
+            <li>page2</li>
+            <li>page3</li>
+            <li>page4</li>
+        </ul>
+    </nav>
+</header>
+<main class="container">
+    <article>
+        <h1>title</h1>
+        <p>content</p>
+    </article>
+    <aside class="sidebar">
+        <ul>
+            <li>post1</li>
+            <li>post2</li>
+            <li>post3</li>
+        </ul>
+    </aside>
+</main>
+<footer>
+    <p>copyright <b>text</b></p>
+</footer> -->
+<script>
+    let header = document.createElement('header');
+    let nav = document.createElement('nav');
+    let ul = document.createElement('ul');
+    nav.append(ul);
+    for (let a = 1; a<4;a++){
+        let li = document.createElement('li');
+        li.textContent = 'page'+a;
+        ul.append(li)
+    }
+    ul.classList.add('head-menu')
+    document.body.prepend(nav)
+    // 
+    let main = document.createElement('main');
+    main.classList.add('container')
+    let article = document.createElement('article');
+    main.append(article);
+    let aside = document.createElement('aside');
+    main.classList.add('sidebar');
+    main.prepend(aside);
+    let ul1 = document.createElement('ul');
+    aside.append(ul1);
+    for (let a = 1; a<4;a++){
+        let li2 = document.createElement('li');
+        li2.textContent = 'page'+a;
+        ul1.append(li2)
+    }
+    let h1 = document.createElement('h1');
+    h1.textContent = 'title';
+    article.append(h1);
+    let p = document.createElement('p');
+    p.textContent = 'content';
+    article.append(p);
+    document.body.prepend(main);
+    // 
+    let footer = document.createElement('footer');
+    let p1 = document.createElement('p');
+    p1.textContent = 'copyright'
+    let b = document.createElement('b');
+    b.textContent = ' text'
+    footer.append(p1);
+    p1.append(b);
+    document.body.prepend(footer)
+</script>
+</body>
+</html>

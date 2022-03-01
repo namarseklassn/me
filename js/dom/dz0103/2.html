@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let table = document.createElement('table');
+        let thead = document.createElement('thead');
+        let tbody = document.createElement('tbody');
+        table.appendChild(thead);
+        table.appendChild(tbody);
+        document.body.append(table);
+        let str = document.createElement('tr');
+        let strN1 = document.createElement('th');
+        strN1.innerHTML = "n/k";
+        let strN2 = document.createElement('th');
+        strN2.innerHTML = "k";
+        let strN3 = document.createElement('th');
+        strN3.innerHTML = "k";
+        str.appendChild(strN1);
+        str.appendChild(strN2);
+        str.appendChild(strN3);
+        thead.appendChild(str);
+        let stol = document.createElement('tr');
+        let stolK1 = document.createElement('td');
+        stolK1.innerHTML = "n";
+        let stolK2 = document.createElement('td');
+        stolK2.innerHTML = "k-n";
+        let stolK3 = document.createElement('td');
+        stolK3.innerHTML = "k-n";
+        stol.appendChild(stolK1);
+        stol.appendChild(stolK2);
+        stol.appendChild(stolK3);
+        tbody.appendChild(stol);
+        // 
+        let str2 = document.createElement('tr');
+        let strK1 = document.createElement('td');
+        strK1.innerHTML = "n";
+        let strK2 = document.createElement('td');
+        strK2.innerHTML = "k-n";
+        let strK3 = document.createElement('td');
+        strK3.innerHTML = "k-n";
+
+        str2.appendChild(strK1);
+        str2.appendChild(strK2);
+        str2.appendChild(strK3);
+        tbody.appendChild(str2);
+// 
+    </script>
+</body>
+
+</html>
