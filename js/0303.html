@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <!-- <style>
+        body{
+            width: 100vw;
+            height: 10vh;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+    </style> -->
+</head>
+<body>
+    <!-- <script>
+        for(let i=0; i<100; i++){
+            let div = document.createElement('div');
+            document.body.prepend(div);
+        }
+        function randomColor(){
+            return '#'+Math.ceil(Math.random()*1000000);
+        }
+        function click(event){
+            if(event.target.tagName === 'DIV') {event.target.style.backgroundColor = randomColor()}
+        }
+        document.body.addEventListener('mouseover', click)
+    </script> -->
+    <script>
+        let table = document.createElement('table');
+        let tbody = document.createElement('tbody');
+        let tr = document.ATTRIBUTE_NODE
+        ('tr');
+        document.body.append(table);
+        table.append(tbody);
+
+        function str1(){
+            for(i=1;i<101;i++){
+                tbody.createElement('tr');
+                tr.textContent = i
+            } 
+        }
+    </script>
+</body>
+</html>
