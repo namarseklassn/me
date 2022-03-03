@@ -15,24 +15,24 @@
 
 <body>
     <div>
-        <button id="q1">right</button>
-        <button id="q2">left</button>
-        <button id="q3">up</button>
-        <button id="q4">down</button>
+        <button data-direction='right'>right</button>
+        <button data-direction='left'>left</button>
+        <button data-direction='top'>up</button>
+        <button data-direction='bottom'>down</button>
     </div>
     <script>
-        let button1 = document.querySelector('#q1');
-        let button2 = document.querySelector('#q2');
-        let button3 = document.querySelector('#q3');
-        let button4 = document.querySelector('#q4');
-        let div = document.querySelector('div');
-        document.body.addEventListiner('click',(event)=>{
-            div.style.right = event.pageX = 'px';
-            div.style.left = event.pageX = 'px';
-            div.style.top = event.pageY = 'px';
-            div.style.bottom = event.pageY = 'px';
-        })
+       let buttons = document.body.querySelectorAll('bottom');
+       let div = document.body.querySelector('div');
+       function handle(event){
+           if(this.dataset.direction === 'right'){
+               div.style.left =(Number.parseInt(div.style.left)||0)+10 +'px'
+           }
+       }
+       buttons.forEach(b=>b.addEventListener('click',handle))
     </script>
+</body>
+
+</html>
 </body>
 
 </html>
