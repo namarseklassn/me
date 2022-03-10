@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <button>+</button>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <script>
+        let next = document.querySelector('button');
+        function click() {
+            let par = document.querySelector('ul');
+            let li = document.createElement('li');
+            li.textContent='пункт'
+            par.appendChild(li)
+        }
+        next.addEventListener('click', click)
+        function li (){
+            let lii = document.querySelectorAll('li');
+            lii.textContent = lii.textContent + '!';
+        }
+        let newLi = document.querySelector('li')
+        newLi.addEventListener('click',li)
+    </script>
+</body>
+</html>
