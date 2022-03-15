@@ -20,16 +20,16 @@
     </form>
     <script>
        let form = document.forms[0];
-       form.addEventListener('button',(event)=>{
+       form.addEventListener('click',(event)=>{
             event.preventDefault();
             const div = document.querySelector('div');
             const first = form.elements.first.value;
             const second = form.elements.second.value;
             const remember = form.elements.remember.checked;
             if(!remember){
-                div.textContent = first + second;
+                div.textContent = Number.parseInt(first) + Number.parseInt(second);
             } else{
-                div.textContent = first - second;
+                div.textContent = Number.parseInt(first) - Number.parseInt(second);
             }
         })
     </script>
