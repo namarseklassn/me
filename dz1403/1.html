@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <ul>
+            <label for="Vvod">ВВод</label>
+            <input type="text" name="Vvod" id="Vvod">
+            <input type="submit" value="Login">
+        </ul>
+    </form>
+    <script>
+        let spis = [];
+        function text() {
+            let ul = document.querySelector('ul');
+            spis.forEach(myText => {
+                let li = document.createElement('li');
+                ul.append(li);
+                li.textContent = myText;
+            })
+            spis.length = 0;
+        }
+        let form = document.forms[0];
+        form.addEventListener('submit',(event)=>{
+            event.preventDefault();
+            const vvod = form.elements.Vvod.value;
+             if(vvod.length>0){
+                 spis.push(vvod)
+             } else{
+                spis.push('ERROR', alert('ERROR'))
+             }
+             text()
+        })
+    </script>
+</body>
+
+</html>

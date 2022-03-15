@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="first">First</label>
+        <input type="text" name="first" id="first">
+        <label for="second">Second</label>
+        <input type="text" name="second" id="second">
+        <label for="paragraph">Paragraph</label>
+        <div style="border: 1px solid;width: 130px;
+        height: 30px;"></div>       
+        <input type="checkbox" name="remember" id="remember">
+        <button>Itogo</button>
+    </form>
+    <script>
+       let form = document.forms[0];
+       form.addEventListener('button',(event)=>{
+            event.preventDefault();
+            const div = document.querySelector('div');
+            const first = form.elements.first.value;
+            const second = form.elements.second.value;
+            const remember = form.elements.remember.checked;
+            if(!remember){
+                div.textContent = first + second;
+            } else{
+                div.textContent = first - second;
+            }
+        })
+    </script>
+</body>
+</html>
