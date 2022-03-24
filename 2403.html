@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let bibl = ['https://bipbap.ru/wp-content/uploads/2017/08/0-70.jpg',
+        'https://cdnimg.rg.ru/img/content/168/10/26/kotik_d_850_d_850.jpg',
+        'https://go64.ru/upload/quickly/cat-2143332_1280.jpg',
+        'https://tlum.ru/uploads/22fa9437434982ea805c89581a59f5487dff254c222261114e9668c829225a9f.jpeg']
+         function load(url){
+            return new Promise((r,a)=>{
+                const img = document.createElement('img');
+                img.src =url;
+                img.onerror =()=>{
+                    a('error')
+                };
+                img.onload=()=>{
+                    r(img)
+                };
+            })
+        }
+        const vsePhoto = bibl.map(img=>load(img));
+        Promise.any(vsePhoto)
+        .then(rq=>{
+            document.body.append(rq)
+        })
+    </script>
+</body>
+</html>
