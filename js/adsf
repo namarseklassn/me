@@ -1,0 +1,30 @@
+class But extends React.Component{
+  constructor(props){
+    super(props);
+    this.state= {value:Number.parseInt(props.value)};
+    this.button=this.button.bind(this);
+  }
+  button(){
+    this.setState({value:this.state.value +1})
+  }
+  render(){
+   return (<button onClick={this.button}> {this.state.value}</button>) 
+  }
+}
+class Num extends React.Component{
+  constructor(){
+    super()
+  }
+  render(){
+    const myNumber= [1];
+    return (
+      <div>
+        {myNumber.map(e=> <But value={e}/>)}
+      </div>
+    )
+  }
+}
+ReactDOM.render(
+    <Num/>,
+    document.getElementById('root')
+  );
